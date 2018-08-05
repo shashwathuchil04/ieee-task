@@ -58,7 +58,7 @@ $> ionic cordova run android
 
 
 Sl.no | Description | Tested-on | Result
-------|---------|------------------------
+------|---------|---------------|--------
 1 | App must ask location access permission | Android | PASS
 2 | On Deny, App must show a message and exit | Android | PASS
 3 | On accept, App must load | Android | PASS
