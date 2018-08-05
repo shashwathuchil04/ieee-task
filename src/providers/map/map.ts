@@ -43,7 +43,8 @@ export class MapProvider {
           zoom: true,
         },
         camera: {
-          target: coords
+          target: coords,
+          zoom: 15
         }
       };
       this.map = GoogleMaps.create(divId, options);

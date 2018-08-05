@@ -18,12 +18,6 @@ Acceptance Criteria:
 Using lazy loading and optimizing the app performance is a plus. Use your artistic discretion to design the view. No further explanation is provided to complete the task.
 
 
-## Abstract
-
-In this example, the app has a map in two pages `Home` and `Contact`.
-
-The `MapProvider` keeps only one map instance, and reuse it.
-
 ----
 
 ## How to run this example?
