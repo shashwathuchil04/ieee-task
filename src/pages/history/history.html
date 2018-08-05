@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      History (pull to refresh)
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list [virtualScroll]="items">
+
+    <ion-item *virtualItem="let item">
+      {{ item.id }} : Lat: {{ item.lat }}, Lng: {{ item.lng }}
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>
