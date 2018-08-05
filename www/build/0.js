@@ -57,7 +57,7 @@ var TabsPage = /** @class */ (function () {
         this.tab2Root = 'HistoryPage';
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/private/tmp/ionic-map-provider-example/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="Map"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="History" tabIcon="information-circle"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/private/tmp/ionic-map-provider-example/src/pages/tabs/tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/bhakta/dev/F/ionic/ieee-task/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="Map"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="History" tabIcon="information-circle"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/bhakta/dev/F/ionic/ieee-task/src/pages/tabs/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);

@@ -75,7 +75,6 @@ var HomePage = /** @class */ (function () {
         this.mapId = "map_canvas1";
         this.lastUpdateTime = new Date();
         this.minFrequency = 15000; // 15-seconds
-        this.setupLocationPermissions = function () { };
         platform.ready().then(function () {
             _this.setupWatch();
         }).catch(function (err) {
@@ -86,9 +85,8 @@ var HomePage = /** @class */ (function () {
         var _this = this;
         console.log("Setting up watch...");
         var watch = this.geolocation.watchPosition();
-        console.log("going to subscribe");
         watch.subscribe(function (data) {
-            console.log("got subscribed data", data);
+            // console.log("got subscribed data", data);
             if (data.coords === undefined) {
                 return;
             }
@@ -96,9 +94,8 @@ var HomePage = /** @class */ (function () {
             // Ignore if its too soon...
             var now = new Date();
             var delta = now.getTime() - _this.lastUpdateTime.getTime();
-            console.log('Delta time = ', now, _this.lastUpdateTime, delta);
             if (_this.lastUpdateTime && delta < _this.minFrequency) {
-                console.log("Ignoring position update.. too fast");
+                // console.log("Ignoring position update.. too fast");
                 return;
             }
             _this.lastUpdateTime = now;
@@ -117,7 +114,6 @@ var HomePage = /** @class */ (function () {
             }).catch(function (err) {
                 console.log('Error accessing location object from local storage', err);
             });
-            console.log("done subscribe");
             // AttachMap will re-position camera to the new position...
             _this.map.attachMap(_this.mapId, coords, data.coords.accuracy);
         }, function (err) { console.log('Subscribe error', err); });
@@ -138,14 +134,9 @@ var HomePage = /** @class */ (function () {
     HomePage.prototype.ionViewWillLeave = function () {
         this.map.detachMap();
     };
-    HomePage.prototype.doRefresh = function (refresher) {
-        console.log('Begin Refresh', refresher);
-        //this.setupWatch();
-        //refresher.enabled = false;
-    };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/private/tmp/ionic-map-provider-example/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n  <div id="map_canvas1" *ngIf="!error"></div>\n  <div *ngIf="error">{{ error }}</div>\n</ion-content>\n'/*ion-inline-end:"/private/tmp/ionic-map-provider-example/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/bhakta/dev/F/ionic/ieee-task/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n  <div id="map_canvas1" *ngIf="!error"></div>\n  <div *ngIf="error">{{ error }}</div>\n</ion-content>\n'/*ion-inline-end:"/Users/bhakta/dev/F/ionic/ieee-task/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_map_map__["a" /* MapProvider */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */],
