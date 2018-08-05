@@ -58,20 +58,23 @@ $> ionic cordova run android
 
 Sl.no | Description | Tested-on | Result
 ------|---------|------------------------
-1. | App must ask location access permission | Android | PASS
-2. |  - On Deny, App must show a message and exit | Android | PASS
-3. |  - On accept, App must load | Android | PASS
-4. | Home Screen must show google map | Android | PASS
-6. | Map must be focussed around user's location | Android | PASS
-7. | As user location changes, map camera should follow | Android | PASS
-8. | User's location must be saved to local DB | Android | PASS
-9. | Potrait and Landscape mode must work | Android | PASS
-10.| History Tab must show the previous locations | Android | PASS
-11. | History tab must show location updates automatically | Android | FAIL (locations captured up until the point are shown.<br> For newer updates screen must be pull-down refreshed)
-12. | Indicate if there are no captured locations | Android | Not Yet Implemented. Screen will be empty
-13. | Show the count of number of stored locations | Android | Not Implemented
-14. | Show the timestamp along with the locaiton | Android | Timestamps are not saved to the DB or displayed at this time
-15. | Efficient implementation of DB | Android | Not done. Values are stored/loaded as JSON strings (inefficient when number of entries is large)
+1 | App must ask location access permission | Android | PASS
+2 | On Deny, App must show a message and exit | Android | PASS
+3 | On accept, App must load | Android | PASS
+4 | Home Screen must show google map | Android | PASS
+6 | Map must be focussed around user's location | Android | PASS
+7 | As user location changes, map camera should follow | Android | PASS
+8 | User's location must be saved to local DB | Android | PASS
+9 | Potrait and Landscape mode must work | Android | PASS
+10 | History Tab must show the previous locations | Android | PASS
+11 | History tab must show location updates automatically | Android | FAIL (locations captured up until the point are shown.<br> For newer updates screen must be pull-down refreshed)
+12 | Indicate if there are no captured locations | Android | Not Yet Implemented. Screen will be empty
+13 | Show the count of number of stored locations | Android | Not Implemented
+14 | Show the timestamp along with the locaiton | Android | Timestamps are not saved to the DB or displayed at this time
+15 | Efficient implementation of DB | Android | Not done. Values are stored/loaded as JSON strings (inefficient when number of entries is large)
+16 | Switch off location in between. | Android | FAIL (I noticed that some times, the empty view with error does not appear). This needs to be fixed
+17 | Move between both the tabs. | Android | PASS
+17 | Move between both the tabs after switching off location. | Android | FAIL (some-times, a white screen appears in Home Tab). This needs to be debugged..
 
 
 ## Files and Functionality
