@@ -50,7 +50,7 @@ $> ionic cordova run android
 - [x] Android Simulator
 - [] IOS
 
-**I have an Ubuntu system. I could only test Android platform**
+**I have an Ubuntu system. I could only test Android platform. I tried to test the app on a borrowed MAC but could not have access to the system for too long to finish verification.**
 
 
 ## Files and Functionality
