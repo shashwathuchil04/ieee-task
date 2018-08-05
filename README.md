@@ -29,9 +29,9 @@ The `MapProvider` keeps only one map instance, and reuse it.
 ## How to run this example?
 
 ```
-$> git clone https://github.com/
+$> git clone https://github.com/shashwathuchil04/ieee-task.git
 
-$> cd maps-exercise
+$> cd ieee-task
 
 // config.xml and package.json has the API KEY for google Maps
 
