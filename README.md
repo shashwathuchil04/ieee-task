@@ -56,6 +56,7 @@ $> ionic cordova run android
 
 ## Test-cases executed
 
+
 Sl.no | Description | Tested-on | Result
 ------|---------|------------------------
 1 | App must ask location access permission | Android | PASS
