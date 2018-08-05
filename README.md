@@ -75,7 +75,8 @@ Sl.no | Description | Tested-on | Result
 15 | Efficient implementation of DB | Android | Not done. Values are stored/loaded as JSON strings (inefficient when number of entries is large)
 16 | Switch off location in between. | Android | FAIL (I noticed that some times, the empty view with error does not appear). This needs to be fixed
 17 | Move between both the tabs. | Android | PASS
-17 | Move between both the tabs after switching off location. | Android | FAIL (some-times, a white screen appears in Home Tab). This needs to be debugged..
+18 | Move between both the tabs after switching off location. | Android | FAIL (some-times, a white screen appears in Home Tab). This needs to be debugged..
+19 | Detect location access being disabled during operation and handle gracefully | Android | FAIL (this area needs some testing and fixes)
 
 
 ## Files and Functionality
