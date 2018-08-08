@@ -15,17 +15,22 @@ export class HomePage {
   lastUpdateTime: Date = new Date();
   minFrequency: number = 15000;  // 15-seconds
   error: string;
+  locationLatData:any;
+  locationLangData:any;
 
   constructor(private map: MapProvider,
               private geolocation: Geolocation,
               private storage: Storage,
               platform: Platform) {
-
       platform.ready().then(() => {
         this.setupWatch();
       }).catch((err) => {
         console.log("Error watching...", err);
       });
+  }
+  receiveMessage($event) {
+    // this.message = $event
+    console.log("mesage came from child")
   }
 
   setupWatch() {
@@ -34,6 +39,7 @@ export class HomePage {
     watch.subscribe((data) => {
       // console.log("got subscribed data", data);
       if (data.coords === undefined) {
+        // this.location = data.coords;
         return;
       }
       this.error = null;
@@ -45,7 +51,8 @@ export class HomePage {
         return;
       }
       this.lastUpdateTime = now;
-
+      this.locationLatData = data.coords.latitude;
+      this.locationLangData = data.coords.longitude;
       // Process the update..
       let coords = {lat: data.coords.latitude, lng: data.coords.longitude};
       this.storage.get('location').then((val) => {
@@ -72,6 +79,8 @@ export class HomePage {
     this.map.getMyLocation().then((location: MyLocation) => {
       console.log("Location ", location, this.map);
       if (this.map) {
+        this.locationLatData = location.latLng.lat
+        this.locationLangData = location.latLng.lng
         this.map.attachMap(this.mapId, location.latLng, location.accuracy);
       }
     }).catch((error) => {

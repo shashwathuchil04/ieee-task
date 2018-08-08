@@ -9,4 +9,5 @@
 
   <div id="map_canvas1" *ngIf="!error"></div>
   <div *ngIf="error">{{ error }}</div>
+  <custom-Component *ngIf="locationLatData" [lat]="locationLatData" [lng]="locationLangData" (messageEvent)="receiveMessage($event)"></custom-Component>
 </ion-content>

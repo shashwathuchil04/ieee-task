@@ -35,7 +35,7 @@ export class MyApp {
   }
 
   private async resolveGeolocation() {
-    try {
+    try {      
       const reqLocAuthorization = await this.diagnostic.requestLocationAuthorization();
       if (reqLocAuthorization === 'GRANTED') {
         console.log('resolveGeolocation granted.');

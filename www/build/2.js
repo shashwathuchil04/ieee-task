@@ -82,7 +82,7 @@ var HistoryPage = /** @class */ (function () {
     };
     HistoryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-history',template:/*ion-inline-start:"/Users/bhakta/dev/F/ionic/ieee-task/src/pages/history/history.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      History (pull to refresh)\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <ion-list [virtualScroll]="items">\n\n    <ion-item *virtualItem="let item">\n      {{ item.id }} : Lat: {{ item.lat }}, Lng: {{ item.lng }}\n    </ion-item>\n  </ion-list>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/bhakta/dev/F/ionic/ieee-task/src/pages/history/history.html"*/
+            selector: 'page-history',template:/*ion-inline-start:"/home/basavva/ieee-task/src/pages/history/history.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      History (pull to refresh)\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content>\n    </ion-refresher-content>\n  </ion-refresher>\n\n  <ion-list [virtualScroll]="items">\n\n    <ion-item *virtualItem="let item">\n      Lat: {{ item.lat }}, Lng: {{ item.lng }}\n    </ion-item>\n  </ion-list>\n\n\n</ion-content>\n'/*ion-inline-end:"/home/basavva/ieee-task/src/pages/history/history.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])

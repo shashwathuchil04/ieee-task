@@ -47,6 +47,7 @@ export class MapProvider {
           zoom: 15
         }
       };
+      // this.map.addCircle()
       this.map = GoogleMaps.create(divId, options);
     });
   }
